@@ -10,7 +10,6 @@ import Info from './Info'
 import Grid from './Grid'
 import Environment from './Environment'
 
-
 const App = () => {
     const [board, setBoard] = useState(Array(9).fill(null))
     const [xIsNext, setXIsNext] = useState(true)
