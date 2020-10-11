@@ -7,9 +7,9 @@ const audio = new Audio(parkmusic)
 const Info = ({board, xIsNext, winner, renderMoves}) => {
   const [sound, setSound] = useState(true)
 
-  let status;
-  winner && winner != "tie" ? status = "Winner: " + winner + "!"
-  : winner === "tie" ? status = "Tie!"
+  let status
+  winner ? status = "Winner: " + winner + "!"
+  : !winner && !board.includes(null) ? status = "Tie!"
   : status = "Next player: " + (xIsNext ? "Gem" : "Pearl")
 
   const toggle = () =>{

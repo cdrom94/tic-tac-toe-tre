@@ -1,5 +1,5 @@
 const calculateWinner = (squares) => {
-  const lines = [
+  let lines = [
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -10,12 +10,9 @@ const calculateWinner = (squares) => {
       [2, 4, 6]
   ]
   for (let i = 0; i < lines.length; i++) {
-      const [a, b, c] = lines[i]
+      let [a, b, c] = lines[i]
       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-          return squares[a]
-      }
-      else if(!squares.includes(null)){
-          return "tie"
+          return squares[a];
       }
   }
   return null
