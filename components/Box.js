@@ -13,12 +13,10 @@ const Box = ({ shape, position, onClick }) => {
     <React.Fragment>
     {geo}
     <mesh position={position} onClick={onClick}>
-      <boxBufferGeometry args={[2.4, 2.4, 2.4 ]} />
+      <planeBufferGeometry args={[2.4, 2.4]} />
       <meshLambertMaterial 
         transparent 
         opacity={0} 
-        color="pink" 
-        alphaTest={0} 
         depthWrite={false} 
         side={DoubleSide} />
     </mesh>
