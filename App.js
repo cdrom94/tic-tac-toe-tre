@@ -34,27 +34,27 @@ const App = () => {
 
     return(
         <React.Fragment>
-                <Suspense fallback={null}>
-                    <Loader 
-                        containerStyles={{background: "white"}}
-                        innerStyles={{background: "rgba(244, 199, 238, 0.76)", height: 45, width: 300}}
-                        barStyles={{background: "white", height: 45}}
-                        dataStyles={{color: "rgba(244, 199, 238, 0.76)", fontSize: "1em", fontFamily: "sans-serif", textTransform: "uppercase", fontWeight: 900, float: "right"}}
-                        dataInterpolation={() => `Loading`} />
-                    <Canvas camera={{ fov: 50, position: [-8.19303804240389, -1.4338184309228788, -12.861740834904932]}}>
-                            <OrbitControls maxDistance={60} enableDamping/>
-                            <Lighting />
-                            <Grid />
-                            <Game board={board} xIsNext={xIsNext} winner={winner} handleClick={handleClick}/>
-                            <Particles count={300} color="pink"/>
-                            <Suspense fallback={null}>
-                                <Flare />
-                            </Suspense> 
-                            <PostProcessing />
-                            <Environment />
-                    </Canvas>
-                    <Info board={board} xIsNext={xIsNext} winner={winner} renderMoves={renderMoves}/>
-                </Suspense>
+            <Suspense fallback={null}>
+                <Loader 
+                    containerStyles={{background: "white"}}
+                    innerStyles={{background: "rgba(244, 199, 238, 0.76)", height: 45, width: 300}}
+                    barStyles={{background: "white", height: 45}}
+                    dataStyles={{color: "rgba(244, 199, 238, 0.76)", fontSize: "1em", fontFamily: "sans-serif", textTransform: "uppercase", fontWeight: 900, float: "right"}}
+                    dataInterpolation={() => `Loading`} />
+                <Canvas camera={{ fov: 50, position: [-8.19303804240389, -1.4338184309228788, -12.861740834904932]}}>
+                    <OrbitControls maxDistance={60} enableDamping/>
+                    <Lighting />
+                    <Grid />
+                    <Game board={board} xIsNext={xIsNext} winner={winner} handleClick={handleClick}/>
+                    <Particles count={300} color="pink"/>
+                    <Suspense fallback={null}>
+                        <Flare />
+                    </Suspense> 
+                    <PostProcessing />
+                    <Environment />
+                </Canvas>
+                <Info board={board} xIsNext={xIsNext} winner={winner} renderMoves={renderMoves}/>
+            </Suspense>
         </React.Fragment>
     )
 }
