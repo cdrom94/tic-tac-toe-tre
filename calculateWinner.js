@@ -6,7 +6,6 @@ import click from "/media/click.mp3"
 const successTune1 = new Audio(success1)
 const successTune2 = new Audio(success2)
 const successTune3 = new Audio(success3)
-// const successTune4 = new Audio(success4)
 const clickTune = new Audio(click)
 
 const successTuneList = [successTune1, successTune2, successTune3]
