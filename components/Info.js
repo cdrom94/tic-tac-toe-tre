@@ -12,7 +12,7 @@ const Info = ({board, xIsNext, winner, renderMoves}) => {
   : !winner && !board.includes(null) ? status = "Tie!"
   : status = "Next player: " + (xIsNext ? "Gem" : "Pearl")
 
-  const toggle = (sound) =>{
+  const toggle = () =>{
     if (sound){
       audio.play()
       audio.loop = true
