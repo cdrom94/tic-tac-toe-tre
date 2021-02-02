@@ -50,9 +50,10 @@ const base = css`
   position: absolute;
   text-transform: uppercase;
   font-weight: 900;
+  font-size: 20px;
   line-height: 1em;
   pointer-events: none;
-  color: rgba(244, 199, 238, 0.76);
+  color: rgba(244, 199, 238, 0.90);
 `
 
 const RightPanel = memo(styled.div`
@@ -66,7 +67,7 @@ const RightPanel = memo(styled.div`
   pointer-events: all;
   cursor: pointer;
    & > a {
-    color: rgba(244, 199, 238, 0.76);
+    color: rgba(244, 199, 238, 0.90);
     text-decoration: none;
     text-align: center;
   }
@@ -100,7 +101,7 @@ const LowerLeft = styled.div`
   ${base}
   bottom: 40px;
   left: 50px;
-  width: 200px;
+  width: 400px;
   @media only screen and (max-width: 350px) {
     text-align: center;
   }
