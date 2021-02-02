@@ -4,7 +4,7 @@ import {OrbitControls} from '@react-three/drei/OrbitControls'
 import {Loader} from '@react-three/drei/Loader'
 import calculateWinner from './calculateWinner'
 // import {Environment} from '@react-three/drei/Environment'
-// import HDRI from './parkimage.hdr'
+// import imageUrl from './media/parkimage.hdr'
 
 import Environment from './components/Environment'
 import Flare from './components/Flare'
