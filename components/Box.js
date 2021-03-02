@@ -14,7 +14,7 @@ const Box = ({ shape, position, onClick }) => {
 	return (
 		<React.Fragment>
 			{geo}
-			<mesh position={position} onClick={onClick}>
+			<mesh position={position} onPointerDown={e => onClick(e)}>
 				<planeBufferGeometry args={[2.4, 2.4]} />
 				<meshLambertMaterial
 					transparent

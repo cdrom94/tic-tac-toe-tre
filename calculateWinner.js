@@ -3,12 +3,12 @@ import success2 from "/media/success2.mp3";
 import success3 from "/media/success3.mp3";
 import click from "/media/click.mp3";
 
-const successTune1 = new Audio(success1);
-const successTune2 = new Audio(success2);
-const successTune3 = new Audio(success3);
 const clickTune = new Audio(click);
-
-const successTuneList = [successTune1, successTune2, successTune3];
+const successTuneList = [
+	new Audio(success1),
+	new Audio(success2),
+	new Audio(success3),
+];
 
 const calculateWinner = squares => {
 	let lines = [

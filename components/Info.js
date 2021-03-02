@@ -53,13 +53,13 @@ const base = css`
 	position: absolute;
 	text-transform: uppercase;
 	font-weight: 900;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 1em;
 	pointer-events: none;
 	color: rgba(244, 199, 238, 0.9);
 `;
 
-const RightPanel = memo(styled.div`
+const RightPanel = styled.div`
 	${base}
 	top: 50%;
 	right: -100px;
@@ -74,9 +74,9 @@ const RightPanel = memo(styled.div`
 		text-decoration: none;
 		text-align: center;
 	}
-`);
+`;
 
-const UpperLeft = memo(styled.div`
+const UpperLeft = styled.div`
 	${base}
 	text-align: right;
 	top: -15px;
@@ -86,7 +86,7 @@ const UpperLeft = memo(styled.div`
 	font-size: 40px;
 	pointer-events: all;
 	cursor: pointer;
-`);
+`;
 
 const UpperRight = styled.div`
 	${base}
@@ -151,4 +151,4 @@ const Global = createGlobalStyle`
     font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   }
 `;
-export default React.memo(Info);
+export default Info;

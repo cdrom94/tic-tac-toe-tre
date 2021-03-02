@@ -39,4 +39,4 @@ const Flare = () => {
 	);
 };
 
-export default Flare;
+export default React.memo(Flare);

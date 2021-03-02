@@ -4,7 +4,6 @@ import { useFrame } from "react-three-fiber";
 
 const Gem = ({ position }) => {
 	const mesh1 = useRef();
-
 	useFrame(() => {
 		if (mesh1.current)
 			mesh1.current.rotation.x = mesh1.current.rotation.y += 0.01;
