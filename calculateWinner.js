@@ -28,9 +28,8 @@ const calculateWinner = squares => {
 			squares[a] === squares[b] &&
 			squares[a] === squares[c]
 		) {
-			successTuneList[
-				Math.floor(Math.random() * successTuneList.length)
-			].play();
+			const index = Math.floor(Math.random() * successTuneList.length);
+			successTuneList[index].play();
 			return squares[a];
 		} else if (squares.some(x => x !== null)) {
 			clickTune.play();
