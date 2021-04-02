@@ -32,6 +32,7 @@ const Flare = () => {
 				position={[-36, 60, 0]}
 				distance={2000}
 				color-setHSL={[0.995, 0.5, 0.9]}
+				castShadow
 			>
 				<lensflare ref={lensflare} color="white" />
 			</pointLight>

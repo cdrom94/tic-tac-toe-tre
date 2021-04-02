@@ -11,7 +11,7 @@ const Gem = ({ position }) => {
 
 	return (
 		<React.Fragment>
-			<mesh position={position} ref={mesh1}>
+			<mesh castShadow receiveShadow position={position} ref={mesh1}>
 				<dodecahedronBufferGeometry args={[0.5]} />
 				<meshPhysicalMaterial
 					map={null}

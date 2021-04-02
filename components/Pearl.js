@@ -4,7 +4,7 @@ const Pearl = ({ position }) => {
 	const mesh = useRef();
 
 	return (
-		<mesh position={position} ref={mesh}>
+		<mesh castShadow receiveShadow position={position} ref={mesh}>
 			<sphereBufferGeometry args={[0.45, 32, 32]} />
 			<meshStandardMaterial
 				color="white"
