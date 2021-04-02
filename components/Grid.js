@@ -7,7 +7,7 @@ const Bar = props => {
 			<meshStandardMaterial
 				metalness={1}
 				roughness={0.1}
-				color={0xffcc88}
+				color={0xf1c232}
 			/>
 		</mesh>
 	);

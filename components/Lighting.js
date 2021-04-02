@@ -9,8 +9,13 @@ const Lighting = () => {
 				angle={Math.PI / 7}
 				position={[150, 150, 250]}
 				penumbra={1}
+				castShadow
 			/>
-			<pointLight position={[-150, 300, -300]} intensity={1.5} />
+			<pointLight
+				position={[-150, 300, -300]}
+				intensity={1.5}
+				castShadow
+			/>
 		</React.Fragment>
 	);
 };

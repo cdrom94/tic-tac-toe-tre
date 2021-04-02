@@ -62,6 +62,7 @@ const App = () => {
 							-12.861740834904932,
 						],
 					}}
+					shadowMap
 				>
 					<OrbitControls maxDistance={60} enableDamping />
 					<Lighting />

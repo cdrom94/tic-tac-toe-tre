@@ -64,8 +64,19 @@ const Particles = ({ count, color }) => {
 	});
 	return (
 		<React.Fragment>
-			<pointLight ref={light} distance={40} intensity={8} color="white" />
-			<instancedMesh ref={mesh} args={[null, null, count]}>
+			<pointLight
+				ref={light}
+				distance={40}
+				intensity={8}
+				color="white"
+				castShadow
+			/>
+			<instancedMesh
+				castShadow
+				receiveShadow
+				ref={mesh}
+				args={[null, null, count]}
+			>
 				<dodecahedronBufferGeometry args={[0.09, 0]} />
 				<meshPhongMaterial color={color} />
 			</instancedMesh>
