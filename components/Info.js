@@ -29,20 +29,22 @@ const Info = ({ board, xIsNext, winner, renderMoves }) => {
 			<UpperLeft>
 				<h1>Tic Tac Toe</h1>
 			</UpperLeft>
-			<UpperRight onClick={toggle}>
-				<p>{sound ? <s>Ambience</s> : "Ambience"}</p>
+			<UpperRight sound={sound} onClick={toggle}>
+				<p>Ambience</p>
 			</UpperRight>
 			<RightPanel>
 				<a href="https://www.zapsplat.com">
 					Audio provided by https://www.zapsplat.com
 				</a>
 			</RightPanel>
-			<LowerLeft>
-				<p>{status}</p>
-			</LowerLeft>
-			<LowerRight onClick={renderMoves}>
-				<p>{board.every(x => x === null) ? "" : "Restart"}</p>
-			</LowerRight>
+			<BottomPanel>
+				<LowerLeft>
+					<p>{status}</p>
+				</LowerLeft>
+				<LowerRight onClick={renderMoves}>
+					<p>{board.every(x => x === null) ? "" : "Restart"}</p>
+				</LowerRight>
+			</BottomPanel>
 			<Global />
 		</React.Fragment>
 	);
@@ -83,9 +85,13 @@ const UpperLeft = styled.div`
 	left: -20px;
 	font-family: "Monsieur La Doulaise", cursive;
 	text-transform: capitalize;
-	font-size: 40px;
+	font-size: 2.5rem;
 	pointer-events: all;
 	cursor: pointer;
+	@media only screen and (max-width: 370px) {
+		text-align: left;
+		font-size: 2rem;
+	}
 `;
 
 const UpperRight = styled.div`
@@ -95,14 +101,28 @@ const UpperRight = styled.div`
 	right: 50px;
 	pointer-events: all;
 	cursor: pointer;
+	text-decoration: ${props => (props.sound ? "line-through" : "none")};
 	@media only screen and (max-width: 500px) {
 		top: 100px;
+		left: 50px;
+		text-align: left;
+	}
+`;
+
+const BottomPanel = styled.div`
+	${base}
+	display: grid;
+	bottom: 40px;
+	width: 100%;
+	background-color: green;
+	grid-template-columns: 1fr 1fr;
+	@media only screen and (max-width: 350px) {
+		text-align: center;
 	}
 `;
 
 const LowerLeft = styled.div`
   ${base}
-  bottom: 40px;
   left: 50px;
   width: 400px;
   @media only screen and (max-width: 350px) {
@@ -113,7 +133,6 @@ const LowerLeft = styled.div`
 
 const LowerRight = styled.div`
   ${base}
-  bottom: 40px;
   right: 50px;
   width: 200px;
   text-align: right;
