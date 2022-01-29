@@ -23,7 +23,7 @@ const App = () => {
 		if (winner || boardCopy[i]) return;
 		boardCopy[i] = xIsNext ? "Gem" : "Pearl";
 		setBoard(boardCopy);
-		setXIsNext(!xIsNext);
+		setXIsNext(prevXIsNext => !prevXIsNext);
 	};
 
 	const renderMoves = () => {

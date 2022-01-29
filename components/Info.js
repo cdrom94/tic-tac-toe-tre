@@ -21,7 +21,7 @@ const Info = ({ board, xIsNext, winner, renderMoves }) => {
 		} else {
 			audio.pause();
 		}
-		setSound(!sound);
+		setSound(prevSound => !prevSound);
 	};
 
 	return (
