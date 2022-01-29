@@ -1,7 +1,7 @@
-import success1 from "/media/success1.mp3";
-import success2 from "/media/success2.mp3";
-import success3 from "/media/success3.mp3";
-import click from "/media/click.mp3";
+import success1 from "url:/media/success1.mp3";
+import success2 from "url:/media/success2.mp3";
+import success3 from "url:/media/success3.mp3";
+import click from "url:/media/click.mp3";
 
 const clickTune = new Audio(click);
 const successTuneList = [

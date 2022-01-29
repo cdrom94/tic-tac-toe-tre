@@ -2,12 +2,12 @@ import {
 	Lensflare,
 	LensflareElement,
 } from "../node_modules/three/examples/jsm/objects/Lensflare.js";
-import { useLoader, extend } from "react-three-fiber";
+import { useLoader, extend } from "@react-three/fiber";
 import React, { useRef, useEffect } from "react";
 import { TextureLoader } from "three";
 
-import img0 from "../media/lensflare0.png";
-import img3 from "../media/lensflare3.png";
+import img0 from "url:../media/lensflare0.png";
+import img3 from "url:../media/lensflare3.png";
 
 extend({ Lensflare, LensflareElement });
 

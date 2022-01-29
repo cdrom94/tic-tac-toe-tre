@@ -1,5 +1,5 @@
 import React from "react";
-import { EffectComposer, Bloom } from "react-postprocessing";
+import { EffectComposer, Bloom } from "@react-three/postprocessing";
 
 const PostProcessing = () => {
 	return (
