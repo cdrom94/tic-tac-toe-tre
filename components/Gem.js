@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { DoubleSide } from "three";
-import { useFrame } from "react-three-fiber";
+import { useFrame } from "@react-three/fiber";
 
 const Gem = ({ position }) => {
 	const mesh1 = useRef();

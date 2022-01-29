@@ -1,15 +1,14 @@
 import React, { useEffect } from "react";
-import { PMREMGenerator, UnsignedByteType } from "three";
-import { useThree } from "react-three-fiber";
+import { PMREMGenerator } from "three";
+import { useThree } from "@react-three/fiber";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
-import HDRI from "../media/parkimage.hdr";
+import HDRI from "url:../media/parkimage.hdr";
 
 const Environment = () => {
 	const { gl, scene } = useThree();
 	const pmremGenerator = new PMREMGenerator(gl);
-	const loader = new RGBELoader();
-	loader.setDataType(UnsignedByteType);
 	pmremGenerator.compileEquirectangularShader();
+	const loader = new RGBELoader();
 
 	useEffect(() => {
 		loader.load(HDRI, texture => {

@@ -1,13 +1,11 @@
-import React, { useState, Suspense, useRef, useCallback } from "react";
-import { Canvas } from "react-three-fiber";
-import { OrbitControls } from "@react-three/drei/OrbitControls";
-import { Loader } from "@react-three/drei/Loader";
+import React, { useState, Suspense } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import { Loader } from "@react-three/drei/web/Loader.js";
 import calculateWinner from "./calculateWinner";
-// import {Environment} from '@react-three/drei/Environment'
-// import imageUrl from './media/parkimage.hdr'
 
 import Environment from "./components/Environment";
-import Flare from "./components/Flare";
+// import Flare from "./components/Flare";
 import Game from "./components/Game";
 import Grid from "./components/Grid";
 import Info from "./components/Info";
@@ -73,9 +71,9 @@ const App = () => {
 						handleClick={handleClick}
 					/>
 					<Particles count={300} color="pink" />
-					<Suspense fallback={null}>
+					{/* <Suspense fallback={null}>
 						<Flare />
-					</Suspense>
+					</Suspense> */}
 					<PostProcessing />
 					<Environment />
 				</Canvas>

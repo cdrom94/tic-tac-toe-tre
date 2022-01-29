@@ -12,22 +12,21 @@
   "author": "SR",
   "license": "ISC",
   "dependencies": {
-    "@react-three/drei": "^2.2.22",
-    "@types/react": "^16.14.5",
-    "drei": "^1.5.7",
-    "parcel": "^1.12.4",
+    "@parcel/babel-preset-env": "^2.2.1",
+    "@react-three/drei": "^8.8.0",
+    "@react-three/fiber": "^7.0.25",
+    "@react-three/postprocessing": "^2.1.2",
+    "@types/react": "^17.0.38",
+    "parcel": "^2.2.1",
     "postprocessing": "^6.21.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-is": "^16.13.1",
-    "react-postprocessing": "^1.3.1",
-    "react-router-dom": "^5.2.0",
-    "react-three-fiber": "^5.3.22",
+    "react-is": "^17.0.2",
+    "react-router-dom": "^6.2.1",
     "styled-components": "^5.2.3",
     "textures": "^1.2.2",
-    "three": "^0.127.0"
+    "three": "^0.137.5"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.16.7",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"

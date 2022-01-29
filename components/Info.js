@@ -1,6 +1,6 @@
 import React, { useState, memo } from "react";
 import styled, { css, createGlobalStyle } from "styled-components";
-import parkmusic from "../media/parkmusic.mp3";
+import parkmusic from "url:../media/parkmusic.mp3";
 
 const audio = new Audio(parkmusic);
 

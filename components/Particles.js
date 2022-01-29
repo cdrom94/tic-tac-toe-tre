@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import React, { useRef, useMemo } from "react";
-import { useFrame } from "react-three-fiber";
+import { useFrame } from "@react-three/fiber";
 
 const Particles = ({ count, color }) => {
 	const mesh = useRef();
